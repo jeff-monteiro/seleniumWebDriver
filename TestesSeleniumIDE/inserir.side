@@ -1,0 +1,121 @@
+{
+  "id": "881447a0-d6af-428f-b326-d04bd3c37ce3",
+  "version": "2.0",
+  "name": "inserir",
+  "url": "https://seubarriga.wcaquino.me/",
+  "tests": [{
+    "id": "cdae7dc0-8d2f-4f6c-8c22-93fd66cad8c2",
+    "name": "inserir",
+    "commands": [{
+      "id": "fdafd7f4-12a6-4bc2-a71b-c08873234880",
+      "comment": "",
+      "command": "open",
+      "target": "https://seubarriga.wcaquino.me/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c386dd98-5ad4-4af6-9f9b-bde4297fb839",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1089x882",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0681ee3-3d31-4eee-80ae-20509db2911d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.caret",
+      "targets": [
+        ["css=.caret", "css:finder"],
+        ["xpath=//div[@id='navbar']/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40af06d5-92ac-44db-903b-285f62db93b8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Adicionar",
+      "targets": [
+        ["linkText=Adicionar", "linkText"],
+        ["css=.dropdown-menu > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Adicionar')]", "xpath:link"],
+        ["xpath=//div[@id='navbar']/ul/li[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/addConta')]", "xpath:href"],
+        ["xpath=//li[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af0d9661-6992-4f2e-bccb-939fa3360b42",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b50f489-7bdd-4910-8670-bb5bf4aa1f03",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Conta 6"
+    }, {
+      "id": "6fd7cae1-2d2f-4bb4-a780-b36b98192bb7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salvar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5417e071-d82d-46b0-8f22-ed513aac3f3f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//body/div", "xpath:position"],
+        ["xpath=//div[contains(.,'Conta adicionada com sucesso!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da8912a6-f5f4-4149-90d7-1cd9b4f7b91a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//body/div", "xpath:position"],
+        ["xpath=//div[contains(.,'Conta adicionada com sucesso!')]", "xpath:innerText"]
+      ],
+      "value": "Conta adicionada com sucesso!"
+    }]
+  }],
+  "suites": [{
+    "id": "f1b03683-d333-4a9d-9518-2e35da3a8093",
+    "name": "Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cdae7dc0-8d2f-4f6c-8c22-93fd66cad8c2"]
+  }],
+  "urls": [],
+  "plugins": []
+}
