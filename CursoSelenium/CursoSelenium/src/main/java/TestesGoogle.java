@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +10,7 @@ public class TestesGoogle {
 	public void testarGoogle() {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
-		System.out.println(driver.getTitle());
+		Assert.assertEquals("Google", driver.getTitle());
 		driver.quit();
 	}
 }
