@@ -3,9 +3,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class TesteCampoTreinamento {
+
 
 	@Test
 	public void testeTextField() {
@@ -50,6 +53,21 @@ public class TesteCampoTreinamento {
 		
 		driver.findElement(By.id("elementosForm:comidaFavorita:2")).click();
 		Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:2")).isSelected());
+		driver.quit();
+	}
+	
+	@Test
+	public void deveInteragirComCombo() {
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().setSize(new Dimension(1200, 765));
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		
+		WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
+		Select combo = new Select(element);
+		//combo.selectByIndex(4);
+		//combo.selectByValue("superior");
+		combo.selectByVisibleText("2o grau incompleto"); // this way can be more used because that is the user view.
+		Assert.assertEquals("2o grau incompleto", combo.getFirstSelectedOption().getText());
 		driver.quit();
 	}
 }
