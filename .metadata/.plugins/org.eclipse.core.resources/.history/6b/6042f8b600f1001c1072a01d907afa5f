@@ -108,7 +108,6 @@ public class TesteCampoTreinamento {
 		combo.selectByVisibleText("Karate");
 		List<WebElement> allSelectedOptions = combo.getAllSelectedOptions();
 		Assert.assertEquals(3, allSelectedOptions.size());
-		driver.quit();
 		
 	}
 }
