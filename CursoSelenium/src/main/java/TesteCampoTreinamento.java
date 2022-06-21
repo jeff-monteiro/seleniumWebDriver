@@ -104,7 +104,7 @@ public class TesteCampoTreinamento {
 		WebElement element = driver.findElement(By.id("elementosForm:esportes"));
 		Select combo = new Select(element);
 		combo.selectByVisibleText("Natacao");
-		combo.selectByVisibleText("Corrida");
+		//combo.selectByVisibleText("Corrida");
 		combo.selectByVisibleText("Karate");
 		
 		List<WebElement> allSelectedOptions = combo.getAllSelectedOptions();
