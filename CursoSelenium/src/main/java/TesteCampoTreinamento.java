@@ -95,4 +95,17 @@ public class TesteCampoTreinamento {
 		Assert.assertTrue(encontrou);
 		driver.quit();
 	}
+	
+	@Test
+	public void deveVerificarValoresComboMultiplo() {
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().setSize(new Dimension(1200, 765));
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		WebElement element = driver.findElement(By.id("elementosForm:esportes"));
+		Select combo = new Select(element);
+		combo.deselectByVisibleText("Natacao");
+		combo.deselectByVisibleText("Natacao");
+		combo.deselectByVisibleText("Natacao");
+		
+	}
 }
