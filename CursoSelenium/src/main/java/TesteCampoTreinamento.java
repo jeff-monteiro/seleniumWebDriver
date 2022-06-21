@@ -84,6 +84,7 @@ public class TesteCampoTreinamento {
 		List<WebElement> options = combo.getOptions();
 		Assert.assertEquals(8, options.size());
 		
+		//Verificar se a opção consta na minha coleção.
 		boolean encontrou = false;
 		for(WebElement option: options) {
 			if(option.getText().equals("Mestrado")) {
@@ -92,5 +93,6 @@ public class TesteCampoTreinamento {
 			}
 		}
 		Assert.assertTrue(encontrou);
+		driver.quit();
 	}
 }
