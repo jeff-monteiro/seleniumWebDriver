@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TesteCampoTreinamento" project="CursoSelenium" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="TesteCampoTreinamento" time="13.673">
-    <testcase name="deveInteragirComRadioButton" classname="TesteCampoTreinamento" time="4.126"/>
-    <testcase name="testeTextField" classname="TesteCampoTreinamento" time="3.253"/>
-    <testcase name="deveInteragirComCheckbox" classname="TesteCampoTreinamento" time="3.307"/>
-    <testcase name="deveInteragirComTextArea" classname="TesteCampoTreinamento" time="2.987"/>
-  </testsuite>
-</testrun>
