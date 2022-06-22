@@ -123,6 +123,11 @@ public class TesteCampoTreinamento {
 		driver.manage().window().setSize(new Dimension(1200, 765));
 		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
 		
-		driver.findElement(By.id("buttonSimple"));
+		WebElement botao = driver.findElement(By.id("buttonSimple"));
+		botao.click();
+		
+		Assert.assertEquals("Obrigado!", botao.getAttribute("value"));
+		
+		
 	}
 }
