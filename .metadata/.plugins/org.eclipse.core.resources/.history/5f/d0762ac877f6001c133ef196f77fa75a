@@ -131,8 +131,6 @@ public class TesteCampoTreinamento {
 		
 	}
 	
-	//Don't let tests passing even though it´s not doing anything
-	
 	@Test
 	public void deveInteragirComLinks() {
 		WebDriver driver = new FirefoxDriver();
@@ -140,7 +138,7 @@ public class TesteCampoTreinamento {
 		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
 		
 		driver.findElement(By.linkText("Voltar")).click();
-		Assert.fail();
+		
 		
 	}
 }

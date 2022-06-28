@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TesteCampoTreinamento" project="CursoSelenium" tests="9" started="9" failures="1" errors="0" ignored="0">
+  <testsuite name="TesteCampoTreinamento" time="26.531">
+    <testcase name="deveInteragirComBotao" classname="TesteCampoTreinamento" time="4.206"/>
+    <testcase name="deveInteragirComCombo" classname="TesteCampoTreinamento" time="3.035"/>
+    <testcase name="deveInteragirComLinks" classname="TesteCampoTreinamento" time="2.093"/>
+    <testcase name="deveInteragirComRadioButton" classname="TesteCampoTreinamento" time="3.163"/>
+    <testcase name="deveVerificarValoresCombo" classname="TesteCampoTreinamento" time="2.853"/>
+    <testcase name="testeTextField" classname="TesteCampoTreinamento" time="2.694"/>
+    <testcase name="deveInteragirComCheckbox" classname="TesteCampoTreinamento" time="3.042"/>
+    <testcase name="deveVerificarValoresComboMultiplo" classname="TesteCampoTreinamento" time="2.6">
+      <failure>java.lang.AssertionError: expected:&lt;3&gt; but was:&lt;2&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:89)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:835)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:647)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:633)&#13;
+	at TesteCampoTreinamento.deveVerificarValoresComboMultiplo(TesteCampoTreinamento.java:111)&#13;
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)&#13;
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)&#13;
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="deveInteragirComTextArea" classname="TesteCampoTreinamento" time="2.844"/>
+  </testsuite>
+</testrun>

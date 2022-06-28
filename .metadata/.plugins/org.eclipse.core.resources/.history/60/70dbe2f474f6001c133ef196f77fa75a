@@ -108,7 +108,7 @@ public class TesteCampoTreinamento {
 		combo.selectByVisibleText("Karate");
 		
 		List<WebElement> allSelectedOptions = combo.getAllSelectedOptions();
-		//Assert.assertEquals(2, allSelectedOptions.size());
+		Assert.assertEquals(2, allSelectedOptions.size());
 		
 		combo.deselectByVisibleText("Corrida");
 		allSelectedOptions = combo.getAllSelectedOptions();
@@ -131,16 +131,11 @@ public class TesteCampoTreinamento {
 		
 	}
 	
-	//Don't let tests passing even though it´s not doing anything
-	
 	@Test
 	public void deveInteragirComLinks() {
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
 		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
-		
-		driver.findElement(By.linkText("Voltar")).click();
-		Assert.fail();
 		
 	}
 }
