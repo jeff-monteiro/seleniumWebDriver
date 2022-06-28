@@ -20,8 +20,10 @@ public class TesteAlert {
 		
 		driver.findElement(By.id("alert")).click();
 		Alert alert = driver.switchTo().alert();
-		Assert.assertEquals("Alert Simples", alert.getText());
+		String texto = alert.getText();
+		Assert.assertEquals("Alert Simples", texto);
+		alert.accept();
 		
-		//driver.findElement(By.id("elementosForm:nome")).sendKeys(alert.getText());
+		driver.findElement(By.id("elementosForm:nome")).sendKeys(texto);
 	}
 }
