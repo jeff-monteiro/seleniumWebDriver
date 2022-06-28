@@ -1,6 +1,7 @@
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -50,5 +51,23 @@ public class TesteAlert {
 		confirm.accept();
 
 		driver.quit();
+	}
+
+	@Test
+	@Ignore
+	public void deveInteragirComPrompt(){
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().setSize(new Dimension(1200, 765));
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+
+		driver.findElement(By.id("prompt")).click();
+		Alert alerta = driver.switchTo().alert();
+		Assert.assertEquals("Digite um numero", alerta.getText());
+		alerta.sendKeys("27");
+		alerta.accept();
+		Assert.assertEquals("Era 27?", alerta.getText());
+		alerta.accept();
+		Assert.assertEquals(":D", alerta.getText());
+		alerta.accept();
 	}
 }
