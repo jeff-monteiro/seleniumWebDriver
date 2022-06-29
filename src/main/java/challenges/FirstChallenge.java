@@ -53,7 +53,7 @@ public class FirstChallenge {
         Assert.assertEquals("Comida: Pizza", driver.findElement(By.id("descComida")).getText());
         Assert.assertEquals("Escolaridade: superior", driver.findElement(By.id("descEscolaridade")).getText());
         Assert.assertEquals("Esportes: Natacao Corrida", driver.findElement(By.id("descEsportes")).getText());
-        
+
         driver.quit();
 
 
