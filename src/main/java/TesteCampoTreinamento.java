@@ -69,7 +69,8 @@ public class TesteCampoTreinamento {
 		Select combo = new Select(element);
 		//combo.selectByIndex(4);
 		//combo.selectByValue("superior");
-		combo.selectByVisibleText("2o grau incompleto"); // this way can be more used because that is the user view.
+		// this way can be more used because that is the user view.
+		combo.selectByVisibleText("2o grau incompleto");
 		Assert.assertEquals("2o grau incompleto", combo.getFirstSelectedOption().getText());
 		driver.quit();
 	}
