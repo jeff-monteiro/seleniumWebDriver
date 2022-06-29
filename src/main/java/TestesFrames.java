@@ -1,4 +1,6 @@
+import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +16,14 @@ public class TestesFrames {
 
         driver.switchTo().frame("frame1");
         driver.findElement(By.id("frameButton")).click();
+        Alert alert = driver.switchTo().alert();
+        String message = alert.getText();
+        Assert.assertEquals("Frame OK!", message);
+        alert.accept();
+
+        //It's necessary bring the focus back to Form.
+        driver.switchTo().defaultContent();
+        driver.findElement(By.id("elementosForm:nome")).sendKeys(message);
 
 
     }
