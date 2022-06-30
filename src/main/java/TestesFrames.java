@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -25,6 +26,30 @@ public class TestesFrames {
         driver.switchTo().defaultContent();
         driver.findElement(By.id("elementosForm:nome")).sendKeys(message);
 
+    }
+
+    @Test
+    @Ignore
+    public void deveInteragirComJanelas(){
+        WebDriver driver = new FirefoxDriver();
+        driver.manage().window().setSize(new Dimension(1200, 765));
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+
+        driver.findElement(By.id("buttonPopUpEasy")).click();
+        driver.switchTo().window("Popup");
+        driver.findElement(By.tagName("textarea")).sendKeys("Deu certo?");
+        //driver.close();
+        driver.switchTo().window("");
+        driver.findElement(By.tagName("textarea")).sendKeys("e agora deu certo?");
+    }
+
+    @Test
+    public void deveInteragirComJanelasSemTitulo(){
+        WebDriver driver = new FirefoxDriver();
+        driver.manage().window().setSize(new Dimension(1200, 765));
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+
+        driver.findElement(By.id("buttonPopUpHard")).click();
 
     }
 }
