@@ -29,7 +29,7 @@ public class TestesFrames {
     }
 
     @Test
-    @Ignore
+    //@Ignore
     public void deveInteragirComJanelas(){
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().setSize(new Dimension(1200, 765));
