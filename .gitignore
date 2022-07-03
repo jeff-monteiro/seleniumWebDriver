@@ -1,8 +1,0 @@
-# files
-.idea
-.settings
-.classpath
-.project
-
-#build
-/target
