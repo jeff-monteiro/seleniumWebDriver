@@ -35,6 +35,10 @@ public class SecondChallenge {
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals("Sexo eh obrigatorio", alert.getText());
         driver.quit();
+    }
 
+    @Test
+    public void validarButtonSexo(){
+        
     }
 }
