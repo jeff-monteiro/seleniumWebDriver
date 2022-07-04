@@ -34,6 +34,7 @@ public class SecondChallenge {
         driver.findElement(By.id("elementosForm:cadastrar")).click();
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals("Sexo eh obrigatorio", alert.getText());
+        driver.quit();
 
     }
 }
