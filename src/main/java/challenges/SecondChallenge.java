@@ -43,6 +43,8 @@ public class SecondChallenge {
         driver.manage().window().setSize(new Dimension(1200, 765));
         driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
 
-        //driver.findElement(By.id());
+        driver.findElement(By.id("elementosForm:sexo:0")).sendKeys("Jefferson");
+        driver.findElement(By.id("elementosForm:sobrenome")).sendKeys("Monteiro");
+        driver.findElement(By.id("elementosForm:sexo:0")).click();
     }
 }
