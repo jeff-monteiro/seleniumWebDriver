@@ -46,5 +46,6 @@ public class SecondChallenge {
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Jefferson");
         driver.findElement(By.id("elementosForm:sobrenome")).sendKeys("Monteiro");
         driver.findElement(By.id("elementosForm:sexo:0")).click();
+        driver.quit();
     }
 }
