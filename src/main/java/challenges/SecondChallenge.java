@@ -82,7 +82,7 @@ public class SecondChallenge {
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals("Voce faz esporte ou nao?", alert.getText());
         driver.quit();
-        
+
 
     }
 }
