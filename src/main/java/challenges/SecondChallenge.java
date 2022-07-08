@@ -58,7 +58,7 @@ public class SecondChallenge {
         driver.findElement(By.id("elementosForm:sexo:0")).click();
 
         driver.findElement(By.id("elementosForm:comidaFavorita:0")).click();
-        //driver.findElement(By.id("elementosForm:comidaFavorita:3")).click();
+        driver.findElement(By.id("elementosForm:comidaFavorita:3")).click();
         driver.findElement(By.id("elementosForm:cadastrar")).click();
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals("Tem certeza que voce eh vegetariano?", alert.getText());
@@ -82,10 +82,7 @@ public class SecondChallenge {
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals("Voce faz esporte ou nao?", alert.getText());
         driver.quit();
-
-
-
-
+        
 
     }
 }
