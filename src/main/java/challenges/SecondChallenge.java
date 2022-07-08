@@ -79,6 +79,8 @@ public class SecondChallenge {
         combo.selectByVisibleText("Karate");
         combo.selectByVisibleText("O que eh esporte?");
         driver.findElement(By.id("elementosForm:cadastrar")).click();
+        Alert alert = driver.switchTo().alert();
+        Assert.assertEquals("Voce faz esporte ou nao?", alert.getText());
         driver.quit();
 
 
