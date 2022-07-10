@@ -1,6 +1,7 @@
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
@@ -16,6 +17,7 @@ public class TesteAlert {
 
 	private WebDriver driver;
 
+	@Before // Defines this method be executed before each test
 	public void inicializa(){
 		driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
