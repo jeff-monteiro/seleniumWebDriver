@@ -26,7 +26,7 @@ public class TesteAlert {
 	
 	@Test
 	public void deveInteragirComAlertSimples() {
-		inicializa();
+
 		driver.findElement(By.id("alert")).click();
 		Alert alert = driver.switchTo().alert();
 		String texto = alert.getText();
@@ -39,7 +39,6 @@ public class TesteAlert {
 
 	@Test
 	public void deveInteragirComConfirm(){
-		inicializa();
 
 		driver.findElement(By.id("confirm")).click();
 		Alert confirm = driver.switchTo().alert();
@@ -62,7 +61,6 @@ public class TesteAlert {
 	@Test
 	@Ignore
 	public void deveInteragirComPrompt(){
-		inicializa();
 
 		driver.findElement(By.id("prompt")).click();
 		Alert alerta = driver.switchTo().alert();
