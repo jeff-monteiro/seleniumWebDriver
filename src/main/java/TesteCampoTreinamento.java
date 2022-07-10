@@ -11,12 +11,14 @@ import org.openqa.selenium.support.ui.Select;
 public class TesteCampoTreinamento {
 
 	private WebDriver driver;
+	private DSL dsl;
 
 	@Before // Defines this method be executed before each test
 	public void getStart(){
 		driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
 		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		dsl = new DSL(driver);
 	}
 	@After
 	public void getFinish(){
@@ -26,9 +28,9 @@ public class TesteCampoTreinamento {
 
 	@Test
 	public void testeTextField() {
-
-		driver.findElement(By.id("elementosForm:nome")).sendKeys("Teste de escrita");
-		Assert.assertEquals("Teste de escrita", driver.findElement(By.id("elementosForm:nome")).getAttribute("value"));
+		dsl.write("elementosForm:nome", "Teste de escrita" );
+		//driver.findElement(By.id("elementosForm:nome")).sendKeys("Teste de escrita");
+		Assert.assertEquals("Teste de escrita", dsl.getValueField("elementosForm:nome"));
 
 	}
 	
