@@ -18,7 +18,6 @@ public class TesteCampoTreinamento {
 		driver.manage().window().setSize(new Dimension(1200, 765));
 		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
 	}
-
 	@After
 	public void getFinish(){
 		driver.quit();
@@ -137,6 +136,6 @@ public class TesteCampoTreinamento {
 		Assert.assertEquals("Campo de Treinamento", driver.findElement(By.tagName("h3")).getText());
 		
 		Assert.assertEquals("Cuidado onde clica, muitas armadilhas...", driver.findElement(By.className("facilAchar")).getText());
-		
+
 	}
 }
