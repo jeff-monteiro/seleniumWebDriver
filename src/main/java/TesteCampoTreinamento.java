@@ -36,9 +36,9 @@ public class TesteCampoTreinamento {
 	
 	@Test
 	public void deveInteragirComTextArea() {
-		
+		dsl.write("elementosForm:sugestoes", "teste");
 		driver.findElement(By.id("elementosForm:sugestoes")).sendKeys("teste");
-		Assert.assertEquals("teste",driver.findElement(By.id("elementosForm:sugestoes")).getAttribute("value"));
+		Assert.assertEquals("teste", dsl.getValueField("elementosForm:sugestoes"));
 
 	}
 	
