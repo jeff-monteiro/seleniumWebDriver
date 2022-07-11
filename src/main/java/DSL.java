@@ -35,7 +35,9 @@ public class DSL {
         combo.selectByVisibleText(valor);
     }
 
-    public boolean isComboSelected(){
-        
+    public String isComboSelected(String id){
+        WebElement element = driver.findElement(By.id(id));
+        Select combo = new Select(element);
+        return combo.getFirstSelectedOption().getText();
     }
 }

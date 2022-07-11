@@ -67,14 +67,14 @@ public class TesteCampoTreinamento {
 	@Test
 	public void deveInteragirComCombo() {
 
-		WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
-		Select combo = new Select(element);
+		dsl.selectCombo("elementosForm:escolaridade", "2o grau incompleto");
+		Assert.assertEquals("2o grau incompleto", dsl.isComboSelected("elementosForm:escolaridade"));
+		//WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
+		//Select combo = new Select(element);
 		//combo.selectByIndex(4);
 		//combo.selectByValue("superior");
 		// this way can be more used because that is the user view.
-		combo.selectByVisibleText("2o grau incompleto");
-		dsl.selectCombo("elementosForm:escolaridade", "2o grau incompleto");
-		Assert.assertEquals("2o grau incompleto", combo.getFirstSelectedOption().getText());
+		//combo.selectByVisibleText("2o grau incompleto");
 
 	}
 	
