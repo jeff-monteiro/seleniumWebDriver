@@ -10,6 +10,11 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TesteCampoTreinamento {
 
+	/*
+	Here I can find two ways to do same thing, but always using
+	the best pattern.
+	 */
+
 	private WebDriver driver;
 	private DSL dsl;
 
@@ -37,16 +42,17 @@ public class TesteCampoTreinamento {
 	@Test
 	public void deveInteragirComTextArea() {
 		dsl.write("elementosForm:sugestoes", "teste");
-		driver.findElement(By.id("elementosForm:sugestoes")).sendKeys("teste");
+		//driver.findElement(By.id("elementosForm:sugestoes")).sendKeys("teste");
 		Assert.assertEquals("teste", dsl.getValueField("elementosForm:sugestoes"));
 
 	}
 	
 	@Test
 	public void deveInteragirComRadioButton() {
-		
-		driver.findElement(By.id("elementosForm:sexo:0")).click();
-		Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:0")).isSelected());
+		dsl.clickRadio("elementosForm:sexo:0");
+		//driver.findElement(By.id("elementosForm:sexo:0")).click();
+		Assert.assertTrue(dsl.isRadioClicked("elementosForm:sexo:0"));
+		//Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:0")).isSelected());
 
 	}
 	
@@ -60,13 +66,14 @@ public class TesteCampoTreinamento {
 	
 	@Test
 	public void deveInteragirComCombo() {
-		
+
 		WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
 		Select combo = new Select(element);
 		//combo.selectByIndex(4);
 		//combo.selectByValue("superior");
 		// this way can be more used because that is the user view.
 		combo.selectByVisibleText("2o grau incompleto");
+		dsl.selectCombo("elementosForm:escolaridade", "2o grau incompleto");
 		Assert.assertEquals("2o grau incompleto", combo.getFirstSelectedOption().getText());
 
 	}
