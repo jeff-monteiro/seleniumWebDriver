@@ -100,15 +100,17 @@ public class TesteCampoTreinamento {
 	
 	@Test
 	public void deveVerificarValoresComboMultiplo() {
+		dsl.selectCombo("elementosForm:esportes", "Natacao");
+		dsl.selectCombo("elementosForm:esportes", "Karate");
 
 		WebElement element = driver.findElement(By.id("elementosForm:esportes"));
 		Select combo = new Select(element);
-		combo.selectByVisibleText("Natacao");
+		//combo.selectByVisibleText("Natacao");
 		//combo.selectByVisibleText("Corrida");
-		combo.selectByVisibleText("Karate");
+		//combo.selectByVisibleText("Karate");
 		
 		List<WebElement> allSelectedOptions = combo.getAllSelectedOptions();
-		//Assert.assertEquals(2, allSelectedOptions.size());
+		Assert.assertEquals(2, allSelectedOptions.size());
 		
 		combo.deselectByVisibleText("Corrida");
 		allSelectedOptions = combo.getAllSelectedOptions();
