@@ -49,7 +49,11 @@ public class DSL {
         driver.findElement(By.linkText(link)).click();
     }
 
-    public String linkIsClicked(String id){
-        return driver.findElement(By.id("resultado"));
+    public String linkIsClicked(By by){
+        return driver.findElement(by).getText();
+    }
+
+    public String getTextName(String id){
+        return getTextName(By.id(id));
     }
 }
