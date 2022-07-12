@@ -120,10 +120,10 @@ public class TesteCampoTreinamento {
 	
 	@Test
 	public void deveInteragirComBotao() {
-		
+
+		dsl.clickButton("buttonSimple");
+
 		WebElement botao = driver.findElement(By.id("buttonSimple"));
-		botao.click();
-		
 		Assert.assertEquals("Obrigado!", botao.getAttribute("value"));
 		
 	}
@@ -134,7 +134,7 @@ public class TesteCampoTreinamento {
 	//@Ignore
 	public void deveInteragirComLinks() {
 		
-		driver.findElement(By.linkText("Voltar")).click();
+		dsl.clickOnLinks("Voltou!");
 		
 		Assert.assertEquals("Voltou!", driver.findElement(By.id("resultado")).getText());
 		//Assert.fail();

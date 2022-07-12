@@ -40,4 +40,16 @@ public class DSL {
         Select combo = new Select(element);
         return combo.getFirstSelectedOption().getText();
     }
+
+    public void clickButton(String id){
+        driver.findElement(By.id(id)).click();
+    }
+
+    public void clickOnLinks(String link){
+        driver.findElement(By.linkText(link)).click();
+    }
+
+    public String linkIsClicked(String id){
+        return driver.findElement(By.id("resultado"));
+    }
 }
