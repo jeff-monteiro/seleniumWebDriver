@@ -143,7 +143,7 @@ public class TesteCampoTreinamento {
 	@Test
 	public void deveBuscarTextosNaPagina() {
 		//Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("Campo de Treinamento"));
-		Assert.assertEquals("Campo de Treinamento", dsl.getTextName(By.tagName("h3")));
+		//Assert.assertEquals("Campo de Treinamento", dsl.getTextName(By.tagName("h3")));
 		
 		Assert.assertEquals("Cuidado onde clica, muitas armadilhas...", driver.findElement(By.className("facilAchar")).getText());
 
