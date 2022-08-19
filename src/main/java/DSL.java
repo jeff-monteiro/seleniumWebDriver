@@ -53,7 +53,7 @@ public class DSL {
         return driver.findElement(by).getText();
     }
 
-    public String getTextName(String id){
-        return getTextName(By.id(id));
-    }
+    //public String getTextName(String id){
+    //    return getTextName(By.id(id));
+    //}
 }
